@@ -58,22 +58,26 @@
 
 
     let insertBtn = document.querySelector("#insert");
-
     function InsertData() {
-        set(ref(db, "Bookings/"+ enterDestination.value),{
-            Date: enterDate.value,
-            Email: enterEmail.value,
-            Destination: enterDestination.value,
-            Amount: enterAmount.value
-            })
-            .then(()=>{
-                alert("Booking added successfully, Check your email for confirmation");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
-        insertBtn.addEventListener('click', InsertData);
+  set(ref(db, "Bookings/" + enterDestination.value), {
+    Date: enterDate.value,
+    Email: enterEmail.value,
+    Destination: enterDestination.value,
+    Amount: enterAmount.value
+  })
+    .then(() => {
+      alert("Booking added successfully, Check your email for confirmation");
+      enterDate.value = "";
+      enterEmail.value = "";
+      enterDestination.value = "";
+      enterAmount.value = "";
+    })
+    .catch(error => {
+      alert(error);
+    });
+}
+insertBtn.addEventListener("click", InsertData);
+
 </script>
 </body>
 </html>
