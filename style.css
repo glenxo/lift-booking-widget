@@ -1,16 +1,22 @@
-body {text-align: center;}
+body {
+    text-align: center;
+}
+
 #enterDetails {
-    float: left; 
-    width: 50%;  
-    background-color: darkslategray; 
-    color: floralwhite;
+    float: center; 
+    width: 40%;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #00000067;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0.5rem 1rem #1111114d;
+    box-shadow: 0 0.5rem 1rem #1111114d;
+    padding: 3rem 2rem;
 }
-#findDetails {
-    float: left; 
-    width: 50%; 
-    background-color: floralwhite; 
-    color: darkslategray;
-}
+
 input {
-    width: 120px;
+    width: 400px;
+    height: 40px;
+    
 }
