@@ -13,17 +13,17 @@
         <h1>Booking</h1>
 
         <h4>Where</h4> 
-        <input id="enterID" type="text"> 
+        <input id="enterDestination" type="text"> 
 
         <h4>When</h4> 
-        <input id="enterName" type="text"> 
+        <input id="enterDate" type="text"> 
 
         <h4>Email</h4> 
         <input id="enterEmail" type="text">
         
 
         <h4>How Many</h4> 
-        <input id="enterAge" type="number"> <br><br>
+        <input id="enterAmount" type="number"> <br><br>
 
         <button id="insert">Book this trip</button>
     <br><br>
@@ -51,20 +51,20 @@
 
     const db = getDatabase();
 
-    let enterID = document.querySelector("#enterID");
-    let enterName = document.querySelector("#enterName");
-    let enterEmail = document.querySelector("#enterName");
-    let enterAge = document.querySelector("#enterAge");
+    let enterDestination = document.querySelector("#enterDestination");
+    let enterDate = document.querySelector("#enterDate");
+    let enterEmail = document.querySelector("#enterEmail");
+    let enterAge = document.querySelector("#enterAmount");
 
 
     let insertBtn = document.querySelector("#insert");
 
     function InsertData() {
-        set(ref(db, "Bookings/"+ enterID.value),{
-            Name: enterName.value,
+        set(ref(db, "Bookings/"+ enterDestination.value),{
+            Date: enterDate.value,
             Email: enterEmail.value,
-                ID: enterID.value,
-                Age: enterAge.value
+            Destination: enterDestination.value,
+            Amount: enterAmount.value
             })
             .then(()=>{
                 alert("Booking added successfully, Check your email for confirmation");
