@@ -12,6 +12,11 @@
     <div id="enterDetails">
         <h1>Booking</h1>
 
+        <p>You'll receive a confirmation email with details on the requested date's 
+            availability and a promotional link to purchase the trip. The email will 
+            also include weather information and recommended activities based on the 
+            travelers' interests.</p>
+
         <h4>Where</h4> 
         <input id="enterDestination" type="text"> 
 
@@ -59,21 +64,21 @@
 
     let insertBtn = document.querySelector("#insert");
     function InsertData() {
-  set(ref(db, "Bookings/" + enterDestination.value), {
+    set(ref(db, "Bookings/" + enterDestination.value), {
     Date: enterDate.value,
     Email: enterEmail.value,
     Destination: enterDestination.value,
     Amount: enterAmount.value
-  })
+    })
     .then(() => {
-      alert("Booking added successfully, Check your email for confirmation");
-      enterDate.value = "";
-      enterEmail.value = "";
-      enterDestination.value = "";
-      enterAmount.value = "";
+    alert("Booking added successfully, Check your email for confirmation");
+    enterDate.value = "";
+    enterEmail.value = "";
+    enterDestination.value = "";
+    enterAmount.value = "";
     })
     .catch(error => {
-      alert(error);
+    alert(error);
     });
 }
 insertBtn.addEventListener("click", InsertData);
