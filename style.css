@@ -1,10 +1,53 @@
+:root {
+    --color-geraldine: #fa6ca2;
+    --color-geraldine1: #eb569cc2;
+    --color-strikemaster: #8a5082;
+    --color-strikemaster2: #8a50825f;
+    --color-kimberly: #6f5f90;
+    --color-kimberly2: #6f5f90d7;
+    --color-ship-cove: #758eb7;
+    --color-casper: #a5cad2;
+    --color-casper2: #dff9ff;
+    --color-casper3: #00ff4c;
+    --color-dark: #262229;
+    --color-darker: #26222993;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 body {
     text-align: center;
+    background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(17, 17, 17, 0)),
+    to(rgba(17, 17, 17, 0))
+    ),
+    url(travelbody3.png) no-repeat;
+    background: linear- gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.452)),
+    url(travelbody3.png) no-repeat;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    background-size: 150%; /* zoom out the image by 50% */
 }
 
 #enterDetails {
     float: center; 
     width: 40%;
+    height: 30%;
+
     margin: 1rem auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -16,7 +59,71 @@ body {
 }
 
 input {
-    width: 400px;
-    height: 40px;
+    float: center; 
+    width: 80%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 5rem;
+    background: #ffffffb1;
+    border: 0.2rem solid var(--color-geraldine);
+    font-size: 1.2rem;
+    color: var(--color-strikemaster);
+    text-transform: none;
+    margin-top: 1rem;
     
 }
+
+#enterDetails > h1:nth-child(1){
+    letter-spacing: 25px;
+    -webkit-text-stroke: 1.0px rgb(255, 255, 255);
+    text-shadow: 0 0 5px #a5cad28f, 
+                  0 0 10px #a5cad2a4, 
+                  0 0 15px #a5cad29f,
+                  0 0 20px #a5cad29c, 
+                  0 0 30px #a5cad296, 
+                  0 0 40px #a5cad294,
+                  0 0 50px #a5cad298, 
+                  0 0 75px #a5cad2a8;
+    background: -webkit-linear-gradient(rgb(153, 243, 255),rgb(161, 74, 243), rgb(255, 0, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    margin-top: 4%;
+    font-size: 3.7vw;
+    display: block;
+}
+
+H4 {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.485);
+    text-shadow: 0 0 5px #a5cad2aa, 
+                0 0 10px #a5cad25b, 
+                0 0 20px #a5cad252, 
+                0 0 40px #c84bb54e,
+                0 0 75px #ed87e656;
+    background: -webkit-linear-gradient(rgb(152, 201, 208),#9dbfff, rgb(100, 190, 255), rgb(225, 160, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.7rem;
+    margin-top: 3%;
+    color: var(--color-ship-cove);
+}
+
+
+#insert {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 5rem;
+    border: 0.2rem solid var(--color-geraldine);
+    font-size: 1.6rem;
+    color: var(--color-strikemaster);
+    text-transform: none;
+    background: none;
+    margin-top: 1rem;
+}
+
+#insert:hover {
+    border: 0.2rem solid var(--color-casper3);
+    font-size: 1.6rem;
+    color: var(--color-geraldine);
+
+}
+
